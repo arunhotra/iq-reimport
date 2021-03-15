@@ -3,4 +3,4 @@
 
   
 - include_tasks: reimport-bigip.yaml
-  with_dict: "{{bigips}}"
+  with_items: "{{bigips}}"
