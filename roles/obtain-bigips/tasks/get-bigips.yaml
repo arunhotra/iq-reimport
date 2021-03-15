@@ -2,16 +2,12 @@
     vars:
     set_fact:
       bigips: []
-    tags:
-    - obtain-bigips
   
   - name: get the bigip file contents
+    shell: 
     cmd: cat bigips.txt
-    args:
-      chdir: "../{{playbook_dir}}"
+    chdir: "../{{playbook_dir}}"
     register: my_bigips
-    tags:
-      - obtain-bigips
 
 
   - name: install these items
