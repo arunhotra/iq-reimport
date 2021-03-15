@@ -13,7 +13,7 @@
     vars:
     set_fact:
       bigips: "{{ bigips|default([]) + [ item ] }}"
-    with_items: "{{my_bigips.stdout_lines | trim }}"
+    with_items: "{{my_bigips.stdout_lines}}"
 
        
   - name: debug bigips
