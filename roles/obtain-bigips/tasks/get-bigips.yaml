@@ -12,7 +12,7 @@
   - name: install these items
     vars:
     set_fact:
-      vcmp_hosts: "{{ bigips|default([]) + [ item ] }}"
+      bigips: "{{ bigips|default([]) + [ item ] }}"
     with_items: my_bigips.stdout_lines
 
        
