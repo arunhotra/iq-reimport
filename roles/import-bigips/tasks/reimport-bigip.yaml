@@ -6,7 +6,7 @@
 
 - name: ReDiscover a device, conflict resolve with default policy
   bigiq_device_discovery:
-    device_address: item.host
+    device_address: "{{item.host}}"
     modules:
       - ltm
     force: yes
