@@ -1,0 +1,14 @@
+---
+
+- name: Re Import bigips
+  hosts: all
+  connection: local
+  gather_facts: no
+
+  collections:
+    - f5networks.f5_modules
+
+  roles:
+    - { role: manage-secret, tags: ['always'] }
+    - { role: obtain-bigips, tags: ['obtain-bigips'] }
+    - { role: import-bigips, tags: ['import-bigips'] }

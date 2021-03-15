@@ -1,0 +1,4 @@
+
+---
+- name: Read secret file
+  include_vars: "defaults/secrets.yaml"

@@ -1,0 +1,8 @@
+---
+
+bigiq_username: admin
+bigiq_password: "{{ vault_bigiq_password }}"
+
+
+bigip_username: admin
+bigip_password: "{{ vault_bigip_password }}"

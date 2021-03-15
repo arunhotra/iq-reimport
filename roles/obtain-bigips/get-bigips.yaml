@@ -1,0 +1,28 @@
+  - name: Initializing variables
+    vars:
+    set_fact:
+      bigips: []
+    tags:
+    - obtain-bigips
+  
+  - name: get the bigip file contents
+    command: cat bigips.txt
+    register: my_bigips
+    tags:
+      - obtain-bigips
+
+
+  - name: install these items
+    vars:
+    set_fact:
+      vcmp_hosts: "{{ bigips|default([]) + [ item ] }}"
+    with_items: my_bigips.stdout_lines
+    tags:
+      - obtain-bigips
+       
+  - name: debug bigips
+    debug:
+      var: bigips
+      verbosity: 3
+    tags:
+      - obtain-bigips

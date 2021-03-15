@@ -1,0 +1,9 @@
+- name: Discover a new device and import config, use default conflict policy.
+  bigiq_device_discovery:
+    device_address: "{{item}}"
+    modules:
+      - ltm
+    force: yes
+    provider: "{{provider}}"
+  tags:
+    - import-bigips
