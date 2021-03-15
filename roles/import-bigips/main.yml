@@ -1,9 +1,5 @@
 
 - import_tasks: build_provider.yaml
-  tags:
-    - import-bigips
-    
 
+  
 - import_tasks: reimport-bigip.yaml
-  tags:
-    - import-bigips

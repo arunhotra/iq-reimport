@@ -17,12 +17,10 @@
     set_fact:
       vcmp_hosts: "{{ bigips|default([]) + [ item ] }}"
     with_items: my_bigips.stdout_lines
-    tags:
-      - obtain-bigips
+
        
   - name: debug bigips
     debug:
       var: bigips
       verbosity: 3
-    tags:
-      - obtain-bigips
+

@@ -1,6 +1,5 @@
 
 - import_tasks: get-bigips.yaml
-  tags:
-    - obtain-bigips
+
     
 

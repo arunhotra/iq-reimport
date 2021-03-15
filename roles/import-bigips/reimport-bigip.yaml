@@ -5,5 +5,4 @@
       - ltm
     force: yes
     provider: "{{provider}}"
-  tags:
-    - import-bigips
+

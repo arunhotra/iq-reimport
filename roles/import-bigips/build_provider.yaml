@@ -6,5 +6,3 @@
       user: "{{bigiq_username}}"
       password: "{{bigiq_password}}"
       validate_certs: "{{validate_certs}}"
-  tags:
-    - import-bigips
