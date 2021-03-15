@@ -1,21 +1,26 @@
-  - name: Initializing variables
-    vars:
-    set_fact:
-      bigips: []
+  # - name: Initializing variables
+  #   vars:
+  #   set_fact:
+  #     bigips: []
   
-  - name: get the bigip file contents
-    shell: 
-      cmd: cat bigips.txt
-    register: my_bigips
+  # - name: get the bigip file contents
+  #   shell: 
+  #     cmd: cat bigips.txt
+  #   register: my_bigips
 
 
-  - name: install these items
-    vars:
-    set_fact:
-      bigips: "{{ bigips|default([]) + [ item ] }}"
-    with_items: "{{my_bigips.stdout_lines}}"
+  # - name: install these items
+  #   vars:
+  #   set_fact:
+  #     bigips: "{{ bigips|default([]) + [ item ] }}"
+  #   with_items: "{{my_bigips.stdout_lines}}"
 
-       
+  - name: Read users from CSV file and return a list
+    read_csv:
+      path: bigips.csv
+      fieldnames: host
+    register: bigips
+
   - name: debug bigips
     debug:
       var: bigips
