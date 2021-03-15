@@ -6,7 +6,6 @@
   - name: get the bigip file contents
     shell: 
       cmd: cat bigips.txt
-      chdir: "../{{playbook_dir}}"
     register: my_bigips
 
 
