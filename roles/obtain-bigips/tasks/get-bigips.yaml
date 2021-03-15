@@ -6,7 +6,9 @@
     - obtain-bigips
   
   - name: get the bigip file contents
-    command: cat "../{{playbook_dir}}/bigips.txt"
+    command: cat bigips.txt
+    args:
+      chdir: "../{{playbook_dir}}"
     register: my_bigips
     tags:
       - obtain-bigips
