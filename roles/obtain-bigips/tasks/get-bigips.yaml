@@ -18,7 +18,6 @@
   - name: Read users from CSV file and return a list
     read_csv:
       path: bigips.csv
-      fieldnames: host
     register: bigips
 
   - name: debug bigips
