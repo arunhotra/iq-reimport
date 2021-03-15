@@ -4,7 +4,7 @@
     verbosity: 3
 
 
-- name: Discover a new device and import config, use default conflict policy.
+- name: ReDiscover a device, conflict resolve with default policy
   bigiq_device_discovery:
     device_address: "{{item}}"
     modules:

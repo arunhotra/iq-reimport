@@ -3,4 +3,4 @@
 
   
 - include_tasks: reimport-bigip.yaml
-  with_items: "{{bigips}}"
+  loop: "{{bigips}}"
