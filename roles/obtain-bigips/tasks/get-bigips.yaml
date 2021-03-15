@@ -5,7 +5,7 @@
   
   - name: get the bigip file contents
     shell: 
-      cmd: cat bigips.txt
+      cmd: cat bigips.txt | trim
     register: my_bigips
 
 
