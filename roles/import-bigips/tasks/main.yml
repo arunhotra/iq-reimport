@@ -3,3 +3,4 @@
 
   
 - import_tasks: reimport-bigip.yaml
+  with_items: "{{bigips}}"
