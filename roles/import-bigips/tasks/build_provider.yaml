@@ -5,4 +5,4 @@
       server: "{{inventory_hostname}}"
       user: "{{bigiq_username}}"
       password: "{{bigiq_password}}"
-      validate_certs: "{{validate_certs}}"
+      validate_certs: no
