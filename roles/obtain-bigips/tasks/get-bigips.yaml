@@ -5,7 +5,7 @@
   
   - name: get the bigip file contents
     shell: 
-      cmd: cat bigips.txt | trim
+      cmd: cat bigips.txt
     register: my_bigips
 
 
@@ -13,7 +13,7 @@
     vars:
     set_fact:
       bigips: "{{ bigips|default([]) + [ item ] }}"
-    with_items: "{{my_bigips.stdout_lines}}"
+    with_items: "{{my_bigips.stdout_lines | trim }}"
 
        
   - name: debug bigips
