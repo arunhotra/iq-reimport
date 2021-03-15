@@ -1,12 +1,12 @@
 - name: debug item
   debug:
-    var: "{{item.host}}"
+    var: "{{item.host | ipaddr}}"
     verbosity: 3
 
 
 - name: ReDiscover a device, conflict resolve with default policy
   bigiq_device_discovery:
-    device_address: "{{item.host}}"
+    device_address: "{{item.host | ipaddr}}"
     modules:
       - ltm
     force: yes
