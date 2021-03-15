@@ -2,5 +2,5 @@
 - import_tasks: build_provider.yaml
 
   
-- import_tasks: reimport-bigip.yaml
+- include_tasks: reimport-bigip.yaml
   with_items: "{{bigips}}"
