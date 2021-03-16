@@ -1,6 +1,6 @@
 - name: debug item
   debug:
-    var: item.host
+    msg: "{{item.host}}"
     verbosity: 3
 
 
